@@ -16,7 +16,7 @@ from sklearn.metrics import accuracy_score
 
 def load_train_data():
     # Change return line related to normal,time,frequency
-    x_train = np.load('/content/my_drive/tut_kaggle/X_train.npy')
+    x_train = np.load('/content/my_tut_drive/tut_kaggle/X_train.npy')
     
     #Compute the average over the frequency axis=1
     #return np.mean(x_train, axis=1)
@@ -28,7 +28,7 @@ def load_train_data():
     #return np.resize(x_train,(4500,20040))
 
 def load_test_data():
-    x_test = np.load('/content/my_drive/tut_kaggle/X_test.npy')
+    x_test = np.load('/content/my_tut_drive/tut_kaggle/X_test.npy')
     #Compute the average over the frequency axis=1
     #return np.mean(x_test, axis=1)
 
@@ -40,7 +40,7 @@ def load_test_data():
     
 def load_train_labels():
     labels = []
-    with open ('/content/my_drive/tut_kaggle/y_train.csv', 'r') as fp:
+    with open ('/content/my_tut_drive/tut_kaggle/y_train.csv', 'r') as fp:
         for line in fp:
             # Skip the first line:
             if "id,scene_label" in line:
@@ -59,7 +59,7 @@ def load_cross_val(X_train, y_train):
     train_labels = []
     test_data = []
     test_labels = []
-    with open ('/content/my_drive/tut_kaggle/crossvalidation_train.csv', 'r') as fp:
+    with open ('/content/my_tut_drive/tut_kaggle/crossvalidation_train.csv', 'r') as fp:
         for line in fp:
             # Skip the first line:
             if "id,scene_label,set" in line:
@@ -133,7 +133,7 @@ def load_cross_val(X_train, y_train):
     y_pred = clf_SVC.predict(secret_test)
     labels = list(le.inverse_transform(y_pred))
     
-    with open("/content/my_drive/tut_kaggle/sub.csv", "w") as fp:
+    with open("/content/my_tut_drive/tut_kaggle/sub.csv", "w") as fp:
         fp.write("Id,Scene_label\n")
         
         for i, label in enumerate(labels):
