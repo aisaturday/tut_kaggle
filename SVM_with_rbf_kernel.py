@@ -133,7 +133,7 @@ if __name__ == "__main__":
     y_pred = clf_SVC.predict(secret_test)
     labels = list(le.inverse_transform(y_pred))
     
-    with open("/content/my_tut_drive/kaggle-acoustic-scene-2018/sub.csv", "w") as fp:
+    with open("/content/my_tut_drive/kaggle-acoustic-scene-2018/submission.csv", "w") as fp:
         fp.write("Id,Scene_label\n")
         
         for i, label in enumerate(labels):
