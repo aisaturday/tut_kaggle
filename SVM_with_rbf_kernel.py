@@ -88,7 +88,7 @@ def load_cross_val(X_train, y_train):
 
 #if __name__ == "__main__": should be removed before running it in Colab.
     
-#if __name__ == "__main__": 
+if __name__ == "__main__": 
     
     # main code
     
