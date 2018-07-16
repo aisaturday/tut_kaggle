@@ -1,2 +1,3 @@
-# tut_kaggle
-helper repo for kaggle biolerplate tutorial
+# Purpose
+
+Helper repo for kaggle biolerplate tutorial
